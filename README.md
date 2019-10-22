@@ -23,3 +23,25 @@ learning and practice of vhsic hardware description language
    ```
    Hello world!
    ```
+
+### Steps for the adder:
+
+1. compile as previously but this time you will need to do it with both the source and the test bench file. Run:
+	```
+	ghdl -a adder.vhdl
+	ghdl -a adder_tb.vhdl
+	```
+
+2. Run the test bench:
+	```
+	ghdl -r adder_tb
+	```
+3. Note that if the design is complex and you need to inspect carefully the signals, you can dump sigan values in several formats:
+https://ghdl.readthedocs.io/en/latest/using/Simulation.html#export-waves and visualize it with a wave viewer such as GtkWave: http://gtkwave.sourceforge.net/ to be able to use GtkViewer you should first simulate your design and dump a waveform, for example (vcd format):
+	```
+	ghdl -r adder_tb --vcd=adder.vcd
+	```  
+	And then view the dumped file:
+	```
+	gtkwave adder.vcd
+	```
