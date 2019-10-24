@@ -1,4 +1,0 @@
-v 4
-file . "counter.vhdl" "4dd46c48110afce9b4f8e8ff66b5b2991edff9a2" "20191023212437.266":
-  entity counter at 1( 0) + 0 on 11;
-  architecture circuit of counter at 10( 216) + 0 on 12;

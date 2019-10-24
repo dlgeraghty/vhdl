@@ -1,4 +1,0 @@
-v 4
-file . "helloworld.vhdl" "31eb4c490c78f50155d4496cd8a8f127b4675a92" "20191022202801.696":
-  entity hello_world at 4( 59) + 0 on 11;
-  architecture behaviour of hello_world at 9( 137) + 0 on 12;
