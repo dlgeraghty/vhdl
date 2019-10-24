@@ -45,3 +45,8 @@ https://ghdl.readthedocs.io/en/latest/using/Simulation.html#export-waves and vis
 	```
 	gtkwave adder.vcd
 	```
+### Steps for the clock module:
+1. The clock module is a very simple one, but we are going to be using it very often so we need to understand it.
+2. To compile these codes , when using the IEEE library you may have to introduce the following flag ```--ieee=synopsys```
+3. When analysing the .vcd file with gtkwave you should have something like the following:  
+![clock vcd file gtkwave](clock/clock.png)
