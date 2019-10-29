@@ -1,23 +1,24 @@
 library IEEE;
-use IEEE.std_logic_1164.all;
-use ieee.std_logic_arith.all;
-use ieee.std_logic_unsigned.all;
+use IEEE.Std_logic_1164.all;
+use IEEE.Numeric_std.all;
 
-entity counter is
-	port(reset, clk : in std_logic; number : out std_logic_vector(3 downto 0));
-end counter;
+entity Counter is
+  port (Clock, Reset: in Std_logic;
+        Q:   out Std_logic_vector(7 downto 0));
+end;
 
-architecture circuit of counter is
-signal inner: std_logic_vector(3 downto 0);
+architecture RTL of Counter is
+  signal q_count: unsigned( 7 downto 0 );
 begin
-	process (reset, clk, inner)
-	begin
-		if(reset = '1') then
-			inner <= "0000";
-		elsif clk'event and clk = '1' then
-			inner <= inner+1;
-		end if;
-	end process;
-	number <= inner;
-end circuit;
+  process ( Reset, Clock )
+  begin
+    if Reset = '1' then
+      q_count <= ( others => '0' );
+    elsif rising_edge( Clock ) then
+	  q_count <= q_count + 1;
+    end if;
+  end process;
 
+  Q <= std_logic_vector( q_count );
+
+end;
