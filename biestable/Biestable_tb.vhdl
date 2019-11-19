@@ -21,7 +21,8 @@ begin
 
   uut: Biestable port map ( Clock  => Clock,
                           Reset  => Reset,
-                          d      => d );
+                          d      => d,
+                          q      => q);
 
   stimulus: process
   begin
