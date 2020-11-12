@@ -1,0 +1,4 @@
+v 4
+file . "GENERAL_FSM.vhdl" "55258e2cad303e2e38cd676c7f32b2f3cef86994" "20201112152656.856":
+  entity general_fsm at 10( 395) + 0 on 11;
+  architecture rtl of general_fsm at 28( 791) + 0 on 12;
